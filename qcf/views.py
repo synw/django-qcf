@@ -7,7 +7,7 @@ from django.conf import settings
 from django.contrib import messages
 from qcf.models import Email
 from qcf.forms import EmailForm
-from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, EMAIL_SENT_MESSAGE
+from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, EMAIL_SENT_MESSAGE, REDIRECT_URL
 
 
 class AddPostView(CreateView):
@@ -27,7 +27,7 @@ class AddPostView(CreateView):
             obj.request = formated_request
             #~ send mail
             send_mail(obj.subject, obj.content, obj.email, RECIPIENTS_LIST)
-            messages.success(self.request, EMAIL_SENT_MESSAGE)
+            messages.info(self.request, EMAIL_SENT_MESSAGE)
         else: 
             raise Http404
         if SAVE_TO_DB == True:
@@ -36,4 +36,4 @@ class AddPostView(CreateView):
             return
             
     def get_success_url(self):
-        return '/'
+        return REDIRECT_URL
