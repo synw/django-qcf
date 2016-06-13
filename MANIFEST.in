@@ -1,0 +1,3 @@
+recursive-include mbase/templates *
+recursive-include mbase/locale *
+recursive-include mbase/migrations *
