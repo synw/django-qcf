@@ -5,7 +5,7 @@ from django.http.response import Http404
 from django.views.generic import CreateView
 from django.conf import settings
 from django.contrib import messages
-from qcf.models import Email
+from qcf.models import Email, EMap
 from qcf.forms import EmailForm
 from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, EMAIL_SENT_MESSAGE, REDIRECT_URL
 
@@ -14,6 +14,12 @@ class AddPostView(CreateView):
     model = Email
     form_class = EmailForm
     template_name = 'qcf/email_form.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super(AddPostView, self).get_context_data(**kwargs)
+        map = EMap.objects.get(name="Contact form")
+        context['map'] = map
+        return context
     
     def form_valid(self, form, **kwargs):
         if self.request.method == "POST":

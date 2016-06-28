@@ -1,0 +1,5 @@
+<img class="img-responsive" 
+	src="http://maps.googleapis.com/maps/api/staticmap?center={{ map.position.latitude }},{{ map.position.longitude }}&zoom={{ map.zoom }}&size={% if map.width %}{{ map.width }}{% endif %}x{% if map.height %}{{ map.height }}{% endif %}&maptype=roadmap&markers={{ map.position.latitude }},{{ map.position.longitude }}&sensor=false&visual_refresh=true&scale={{ map.scale }}" 
+	width="{% if map.width %}{{ map.width }}px{% endif %}" 
+ />
+

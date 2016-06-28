@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 14:23+0000\n"
+"POT-Creation-Date: 2016-06-28 13:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,34 +26,74 @@ msgstr "Formulaire de contact"
 msgid "Your message has been sent"
 msgstr "Votre message a été envoyé"
 
-#: models.py:8 models.py:16
+#: models.py:9
+msgid "Name"
+msgstr "Nom"
+
+#: models.py:10
+msgid "Position"
+msgstr ""
+
+#: models.py:11
+msgid "Zoom"
+msgstr ""
+
+#: models.py:12
+msgid "Scale"
+msgstr "Echelle"
+
+#: models.py:13
+msgid "Width"
+msgstr "Largeur"
+
+#: models.py:14
+msgid "Height"
+msgstr "Hauteur"
+
+#: models.py:15
+msgid "Text"
+msgstr "Texte"
+
+#: models.py:18
+msgid "Map"
+msgstr "Carte"
+
+#: models.py:19
+msgid "Maps"
+msgstr "Cartes"
+
+#: models.py:26 models.py:34
 msgid "Email"
 msgstr "Email"
 
-#: models.py:9
+#: models.py:27
 msgid "Subject"
 msgstr "Sujet"
 
-#: models.py:10
+#: models.py:28
 msgid "Message"
 msgstr "Message"
 
-#: models.py:12
+#: models.py:30
 msgid "Date posted"
 msgstr "Posté le"
 
-#: models.py:17
+#: models.py:35
 msgid "Emails"
 msgstr "Emails"
 
-#: templates/qcf/email_form.html:4 templates/qcf/email_form.html.py:16
+#: templates/qcf/email_form.html:4 templates/qcf/email_form.html:20
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/qcf/email_form.html:21
+#: templates/qcf/email_form.html:16
+msgid "Find us"
+msgstr "Nous trouver"
+
+#: templates/qcf/email_form.html:25
 msgid "Save"
 msgstr "Enregistrer"
 
-#: templates/qcf/email_form.html:25
+#: templates/qcf/email_form.html:29
 msgid "Back"
 msgstr "Retour"
