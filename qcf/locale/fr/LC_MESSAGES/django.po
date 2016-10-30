@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-28 13:43+0000\n"
+"POT-Creation-Date: 2016-10-30 11:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,78 +22,48 @@ msgstr ""
 msgid "Contact form"
 msgstr "Formulaire de contact"
 
-#: conf.py:11
+#: conf.py:12
 msgid "Your message has been sent"
 msgstr "Votre message a été envoyé"
 
-#: models.py:9
-msgid "Name"
-msgstr "Nom"
-
-#: models.py:10
-msgid "Position"
-msgstr ""
-
-#: models.py:11
-msgid "Zoom"
-msgstr ""
-
-#: models.py:12
-msgid "Scale"
-msgstr "Echelle"
-
-#: models.py:13
-msgid "Width"
-msgstr "Largeur"
-
-#: models.py:14
-msgid "Height"
-msgstr "Hauteur"
-
-#: models.py:15
-msgid "Text"
-msgstr "Texte"
-
-#: models.py:18
-msgid "Map"
-msgstr "Carte"
-
-#: models.py:19
-msgid "Maps"
-msgstr "Cartes"
-
-#: models.py:26 models.py:34
+#: models.py:8 models.py:16
 msgid "Email"
 msgstr "Email"
 
-#: models.py:27
+#: models.py:9
 msgid "Subject"
 msgstr "Sujet"
 
-#: models.py:28
+#: models.py:10
 msgid "Message"
 msgstr "Message"
 
-#: models.py:30
+#: models.py:12
 msgid "Date posted"
 msgstr "Posté le"
 
-#: models.py:35
+#: models.py:17
 msgid "Emails"
 msgstr "Emails"
 
-#: templates/qcf/email_form.html:4 templates/qcf/email_form.html:20
+#: templates/qcf/email_form.html:4 templates/qcf/email_form.html:16
+#: templates/qcf/ok.html:4 templates/qcf/ok.html:9
+#: templates/qcf/rest_form.html:12
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/qcf/email_form.html:16
-msgid "Find us"
-msgstr "Nous trouver"
-
-#: templates/qcf/email_form.html:25
+#: templates/qcf/email_form.html:21 templates/qcf/rest_form.html:17
 msgid "Save"
 msgstr "Enregistrer"
 
-#: templates/qcf/email_form.html:29
+#: templates/qcf/email_form.html:25 templates/qcf/rest_form.html:21
 msgid "Back"
 msgstr "Retour"
+
+#: templates/qcf/ok.html:12
+msgid "Your email has been sent, thank you. We will answer soon."
+msgstr "Votre email a été envoyé, nous vous remercions et allons vous répondre très bientôt."
+
+#: templates/qcf/ok.html:15
+msgid "Home"
+msgstr "Accueil"

@@ -1,9 +1,5 @@
-{% extends "base.html" %}
 {% load staticfiles i18n bootstrap %}
 
-{% block title %}{% trans 'Contact' %}{% endblock %}
-
-{% block content %}
 <script type="text/javascript" src="/static/ckeditor/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="/static/ckeditor/ckeditor-init.js"></script>
 <style>
@@ -25,4 +21,3 @@
 		<a class="btn btn-default gus" style="margin-top:3em" href="javascript:history.back()"><i class="fa fa-arrow-left"></i>&nbsp;{% trans 'Back' %}</a>
 	</div>
 </div>
-{% endblock %}
