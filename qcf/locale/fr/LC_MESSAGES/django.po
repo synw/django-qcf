@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-30 11:17+0000\n"
+"POT-Creation-Date: 2016-10-31 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,24 +46,24 @@ msgstr "Posté le"
 msgid "Emails"
 msgstr "Emails"
 
-#: templates/qcf/email_form.html:4 templates/qcf/email_form.html:16
-#: templates/qcf/ok.html:4 templates/qcf/ok.html:9
-#: templates/qcf/rest_form.html:12
+#: templates/qcf/email_form.html:4 templates/qcf/rest_form.html:72
+#: templates/qcf/rest_ok.html:4
 msgid "Contact"
 msgstr "Contact"
 
-#: templates/qcf/email_form.html:21 templates/qcf/rest_form.html:17
+#: templates/qcf/rest_form.html:77
 msgid "Save"
 msgstr "Enregistrer"
 
-#: templates/qcf/email_form.html:25 templates/qcf/rest_form.html:21
-msgid "Back"
-msgstr "Retour"
-
-#: templates/qcf/ok.html:12
+#: templates/qcf/rest_ok.html:7
 msgid "Your email has been sent, thank you. We will answer soon."
-msgstr "Votre email a été envoyé, nous vous remercions et allons vous répondre très bientôt."
+msgstr ""
+"Votre email a été envoyé, nous vous remercions et allons vous répondre très "
+"bientôt."
 
-#: templates/qcf/ok.html:15
+#: templates/qcf/rest_ok.html:10
 msgid "Home"
 msgstr "Accueil"
+
+#~ msgid "Back"
+#~ msgstr "Retour"

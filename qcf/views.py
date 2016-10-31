@@ -4,7 +4,6 @@ from django.core.mail import send_mail
 from django.http.response import Http404
 from django.views.generic import CreateView
 from django.views.generic.base import TemplateView
-from django.contrib import messages
 from qcf.models import Email
 from qcf.forms import EmailForm
 from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, EMAIL_SENT_MESSAGE, REDIRECT_URL
@@ -12,7 +11,13 @@ from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, EMAIL_SENT_MESSAGE, REDIRECT_U
 
 class OkPageView(TemplateView):
     template_name = "qcf/ok.html"
-
+    
+    def get_template_names(self):
+        if not self.request.is_ajax():
+            return ['qcf/ok.html']
+        else:
+            return ['qcf/rest_ok.html']
+    
 
 class AddPostView(CreateView):
     model = Email
@@ -30,7 +35,6 @@ class AddPostView(CreateView):
             obj.request = formated_request
             #~ send mail
             send_mail(obj.subject, obj.content, obj.email, RECIPIENTS_LIST)
-            messages.info(self.request, EMAIL_SENT_MESSAGE)
         else: 
             raise Http404
         if SAVE_TO_DB == True:
@@ -39,7 +43,11 @@ class AddPostView(CreateView):
             return
         
     def get_template_names(self):
-        return ['qcf/email_form.html']
+        if not self.request.is_ajax():
+            return ['qcf/email_form.html']
+        else:
+            return ['qcf/rest_form.html']
+        
             
     def get_success_url(self):
         return REDIRECT_URL

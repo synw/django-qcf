@@ -1,0 +1,1 @@
+page('/contact/mail/', function(ctx, next) { loadHtml('/contact/rest/', "Contact") } );
