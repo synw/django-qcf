@@ -6,7 +6,7 @@ from django.views.generic import CreateView
 from django.views.generic.base import TemplateView
 from qcf.models import Email
 from qcf.forms import EmailForm
-from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, EMAIL_SENT_MESSAGE, REDIRECT_URL
+from qcf.conf import SAVE_TO_DB, RECIPIENTS_LIST, REDIRECT_URL
 
 
 class OkPageView(TemplateView):
@@ -57,5 +57,3 @@ class AddPostRestView(AddPostView):
     
     def get_template_names(self):
         return ['qcf/rest_form.html']
-    
-    

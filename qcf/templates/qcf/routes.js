@@ -1,1 +1,1 @@
-page('/contact/mail/', function(ctx, next) { loadHtml('/contact/rest/', "Contact") } );
+page('/contact/', function(ctx, next) { loadHtml('/contact/rest/', "Contact") } );
