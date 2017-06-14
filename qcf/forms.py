@@ -5,10 +5,6 @@ from qcf.models import Email
 
 
 class EmailForm(forms.ModelForm):
-    # honeypot
-    qcf = forms.CharField()
-    qcf.label = ''
-    qcf.required = False
     
     class Meta:
         model = Email
