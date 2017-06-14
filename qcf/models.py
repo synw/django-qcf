@@ -17,5 +17,5 @@ class Email(models.Model):
         verbose_name_plural = _(u'Emails')
         ordering = ('-created',)
 
-    def __unicode__(self):
-        return unicode(self.email+' : '+self.subject)
+    def __str__(self):
+        return self.email+' : '+self.subject

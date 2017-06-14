@@ -1,78 +1,11 @@
-{% load staticfiles i18n bootstrap %}
+{% load staticfiles i18n %}
 
-<script type="text/javascript">
-function getCookie(name) {
-       var cookieValue = null;
-       if (document.cookie && document.cookie != '') {
-             var cookies = document.cookie.split(';');
-       for (var i = 0; i < cookies.length; i++) {
-            var cookie = jQuery.trim(cookies[i]);
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) == (name + '=')) {
-            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-              break;
-          }
-       }
-   }
-return cookieValue;
-}
-var csrftoken = getCookie('csrftoken');
-
-function csrfSafeMethod(method) {
-	// these HTTP methods do not require CSRF protection
-	return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-	}
-	$.ajaxSetup({
-	    crossDomain: false, // obviates need for sameOrigin test
-	    beforeSend: function(xhr, settings) {
-	        if (!csrfSafeMethod(settings.type)) {
-	            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-	        }
-	    }
-	});
-
-function post_form(frm) {
-	$.ajax({
-	      type: 'POST',
-	      url: '{% url 'contact-rest' %}',
-	      data: frm.serialize(),
-	      dataType : 'html',
-	      success: function (response) {
-	          $("#content").html(response);
-	      },
-	      error: function(xhr, textStatus, error) {
-	      	console.log("Error:");
-	          console.log(xhr.statusText);
-			    console.log(textStatus);
-			    console.log(error);
-	      }
-	  });
-}
-	
-$( document ).ready(function() {
-	var frm = $('#contact_form');
-	frm.submit(function (ev) {
-		ev.preventDefault();
-		ev.stopImmediatePropagation();
-	  	post_form(frm);
-	  return false;
-	});
-});
-function submit_form() {
-	$('#contact_form').submit();
-}
-</script>
-<style>
-	#id_qcf {
-		display:none;
-	}
-</style>
 <div class="row">
 	<div id="inner_content" class="col-xs-12 col-md-offset-1 col-md-10 col-md-offset-1 text-center">
 		<h1><i class="fa fa-commenting-o"></i>&nbsp;{% trans 'Contact' %}</h1>
 		<div>
 			<form id="contact_form" action="{% url 'contact-rest' %}" method="post">{% csrf_token %}
-				{{ form|bootstrap }}
+				{{ form }}
 				<div id="submit_form">
 					<input type="submit" class="btn btn-block btn-lg btn-primary" value="{% trans 'Save' %}" />
 				</div>
