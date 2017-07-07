@@ -8,6 +8,13 @@ A simple contact form that can save the messages to the db.
 
 Add `'qcf',` to installed apps, migrate
 
+Set urls:
+
+   ```python
+   url(r'^contact/', include('qcf.urls')),
+   ```
+
+
 Default settings: 
 
 - SAVE_TO_DB = True
