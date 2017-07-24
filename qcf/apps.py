@@ -7,6 +7,6 @@ from django.apps import AppConfig
 class QcfConfig(AppConfig):
     name = "qcf"
     verbose_name = _(u"Contact form")
-    
+
     def ready(self):
         pass

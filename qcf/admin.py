@@ -11,7 +11,7 @@ class EmailAdmin(admin.ModelAdmin):
     search_fields = ('message', 'subject')
     date_hierarchy = 'created'
     list_display = ('email', 'subject', 'created')
-    
+
     def get_readonly_fields(self, request, obj=None):
         readonly_fields = ('created', 'email', 'subject', 'content')
         if request.user.is_superuser:
