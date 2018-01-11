@@ -1,0 +1,37 @@
+{% load staticfiles i18n bootstrap %}
+<div class="gds-md">
+	<div id="inner_content"  style="max-width:1000px; margin:0 auto">
+		<h1><i class="fa fa-commenting-o"></i>{% trans 'Contact' %}</h1>
+		<div>
+			<form id="contact_form" action="{% url 'contact-post' %}" method="post">{% csrf_token %}
+				{{ form|bootstrap }}
+				<div id="submit_form">
+					<input type="submit" class="btn-submit" value="{% trans 'Save' %}" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<style>
+label {
+	display:block;
+}
+input {
+	width:99.5%;
+	margin:5px 0px 20px 0px;
+}
+.btn-submit {
+	height:40px;
+	width:100%;
+	margin: 10px 0px 10px 0px;
+	background-color:steelblue;
+	color:white;
+	border:0px;
+	cursor:pointer;
+}
+.btn-submit:hover {
+	background-color:#ccc;
+	cursor:pointer;
+}
+</style>
+
