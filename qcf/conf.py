@@ -7,6 +7,8 @@ from django.core.urlresolvers import reverse_lazy
 
 SAVE_TO_DB = getattr(settings, 'QCF_SAVE_TO_DB', True)
 
+TEMPLATES = getattr(settings, 'QCF_TEMPLATES', "default")
+
 RECIPIENTS_LIST = getattr(settings, 'QCF_RECIPIENTS_LIST', [
                           settings.DEFAULT_FROM_EMAIL])
 
