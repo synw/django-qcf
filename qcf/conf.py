@@ -2,8 +2,7 @@
 
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
-
+from django.urls import reverse_lazy
 
 SAVE_TO_DB = getattr(settings, 'QCF_SAVE_TO_DB', True)
 
